@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify OTP Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
+  <script src="login.js"></script>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Login to Spotify</h2>
+
+      <!-- Phone Login -->
+      <div id="phone-login">
+        <input type="text" id="phone-number" placeholder="Enter phone number">
+        <button id="send-otp-btn" onclick="sendOTP()">Send OTP</button>
+      </div>
+
+      <!-- OTP Verification -->
+      <div id="otp-login" style="display: none;">
+        <input type="text" id="otp" placeholder="Enter OTP">
+        <button id="verify-otp-btn" onclick="verifyOTP()">Verify OTP</button>
+      </div>
+
+      <!-- Message -->
+      <div id="message"></div>
+    </div>
+  </div>
+</body>
+</html> 
