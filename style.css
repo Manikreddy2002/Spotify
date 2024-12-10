@@ -1,0 +1,106 @@
+/* Spotify-like theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: white; /* White text for better readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    text-align: center;
+}
+
+.login-box {
+    background-color: #1e1e1e; /* Darker box background */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 380px;
+    transition: all 0.3s ease;
+}
+
+.login-box:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    color: #1db954; /* Spotify green color */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #bbb; /* Lighter gray color for labels */
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #222; /* Dark background for inputs */
+    color: white;
+    font-size: 1em;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1db954; /* Spotify green color */
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #1aa34a; /* Slightly darker green when hovering */
+}
+
+button:disabled {
+    background-color: #888; /* Disabled button color */
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #f2f2f2; /* Light gray text for messages */
+}
+
+#otp-login, #message {
+    display: none; /* Initially hide OTP and message sections */
+}
+
+/* ReCAPTCHA container positioning */
+#recaptcha-container {
+    margin-bottom: 20px;
+}
+
+/* Ensure the page looks good on mobile devices */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 20px;
+    }
+
+    input, button {
+        font-size: 1em;
+    }
+}
